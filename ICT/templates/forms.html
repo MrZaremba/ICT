@@ -1,9 +1,11 @@
+<!-- Displaying Forms, see routes forms function -->
+
 {% extends "base.html" %}
 {% set active_page='form' %}
 {% block title %}  Form  {% endblock %}
 {% block content %}
 <form action="" method="POST">
-    {{ form.hidden_tag() }}
+    {{ form.hidden_tag() }} <!-- Mainly copy this section just not variable names match from routes -->
     <fieldset class="form-group">
         <legend class="border-bottom mb-4">Sign Up</legend>
         <div class="form-group">
@@ -11,7 +13,7 @@
             {% if form.username.errors %}
                 {{ form.username(class="form-control form-control-lg is-invalid") }}
                 <div class="invalid-feedback">
-                    {% for error in form.username.errors %}
+                    {% for error in form.username.errors %} <!--Dispalys the errors from the validators in the form class -->
                         <span>{{ error }}</span>
                     {% endfor %}
                 </div>

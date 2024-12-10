@@ -1,3 +1,5 @@
+<!--Displaying all current users. -->
+
 {% extends "base.html" %}
 {% set active_page='home' %}
 {% block title %}  {{title}}  {% endblock %}
@@ -7,6 +9,7 @@
     <h1>{{ user }}</h1>
     <p>id: {{ user.id }}</p>
     <a class="btn btn-danger btn-sm" href="{{ url_for('delete_user', user_id=user.id) }}">Delete</a>
+    <!-- Delete button adding the user.id to the url so it can be passed in as a paramter to the delete_user route -->
  {% endfor %}
 
 {% endblock %}

@@ -1,3 +1,5 @@
+#Runs the app, before this can run make sure the db is setup.  otherwise db.create_all() will not work.
+
 from ICT import app
 from ICT import db
 
